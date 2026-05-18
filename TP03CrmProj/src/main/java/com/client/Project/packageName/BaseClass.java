@@ -1,6 +1,9 @@
 package com.client.Project.packageName;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -30,7 +33,21 @@ public class BaseClass {
 	public void configBC() throws Throwable {
 		String BROWSER = fLib.getDataFromProperties("Browser");
 		String URL = fLib.getDataFromProperties("Url");
+		
+		
+		if(BROWSER.equals("chrome")){
+  			driver=new ChromeDriver();
+  		}else if(BROWSER.equals("firefox")){
+  				driver=new FirefoxDriver();
+  			}
+  		else if(BROWSER.equals("edge")){
+  			driver=new EdgeDriver();
+  		}else {
+  			driver= new ChromeDriver();
+  		}
+		driver.manage().window().maximize();
 		driver.get(URL);
+		
 		sdriver=driver;
 	}
 	@BeforeMethod
