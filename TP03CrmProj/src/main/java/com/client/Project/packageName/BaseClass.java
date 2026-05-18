@@ -23,6 +23,7 @@ public class BaseClass {
 	public WebDriverUtility wLib = new WebDriverUtility();
 	public WebDriver driver;
 	public static WebDriver sdriver;
+	public HomePage hp ;
 	
 	
 	@BeforeSuite
@@ -69,10 +70,12 @@ public class BaseClass {
 		String PASSWORD = fLib.getDataFromProperties("Password");
 		LoginPage lp = new LoginPage(driver);
 		lp.LoginToApp(USERNAME, PASSWORD);
+		hp = new HomePage(driver);
+		
 	}
 	@AfterMethod
 	public void configAM() {
-		HomePage hp = new HomePage(driver);
+		
 		hp.logout();
 		
 	}
