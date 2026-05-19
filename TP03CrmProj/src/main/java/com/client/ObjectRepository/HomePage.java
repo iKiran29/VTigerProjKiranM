@@ -75,8 +75,6 @@ public class HomePage {
 		return campaignlink;
 	}
 	
-	
-
 	public WebElement getInvoiceLink() {
 		return invoiceLink;
 	}
