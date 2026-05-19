@@ -1,9 +1,15 @@
 package com.client.project.Product;
 
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.client.ObjectRepository.HomePage;
+import com.client.ObjectRepository.InvoicePage;
 import com.client.ObjectRepository.ProductPage;
 import com.client.Project.packageName.BaseClass;
 
@@ -36,8 +42,39 @@ public class CreateProductTest extends BaseClass {
  		boolean status = HeaderMsg.contains(ProductName);
 		System.out.println(HeaderMsg);
 		Assert.assertEquals(status, true);
- 
 	}
+	
+	@Test
+	
+	public void CreateInvoiceWithProduct()throws Throwable {
+		
+		/*read test script data from excel file*/
+		String ProductName =eLib.getDataFromExcel("org", 7, 2)+jLib.getRandomNum();
+		
+		/*navigate to product homepage module*/
+		HomePage hp=new HomePage(driver);
+		hp.getProductLink().click();
+		
+		/* click on "create product" button*/
+		ProductPage pp=new ProductPage(driver);
+		pp.getCreateNewProBtn().click();
+		
+		/*enter all the details and create new product using buisness method */
+	    pp.createProduct(ProductName);
+	   
+	    
+	    /*invoice page details*/
+		String InvName =eLib.getDataFromExcel("org", 16, 2)+jLib.getRandomNum();
+		
+		InvoicePage ip=new InvoicePage(driver);
+		ip.getInvoicLink().click();
+		ip.CreateInvoice(InvName);
+		
+		
+		
+
+		}
+	
 		}
 	
 	
