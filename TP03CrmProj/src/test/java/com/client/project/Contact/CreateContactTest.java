@@ -1,5 +1,6 @@
 package com.client.project.Contact;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
@@ -19,6 +20,10 @@ public class CreateContactTest extends BaseClass{
 		
 		ContactPage cp = new ContactPage(driver);
 		cp.createContact(lastName);
+		
+		String headerMsg = cp.getHeaderMsg().getText();
+		boolean status = headerMsg.contains(lastName);
+		Assert.assertEquals(status, true);
 		
 		
 	}
