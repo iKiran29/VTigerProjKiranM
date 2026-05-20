@@ -44,13 +44,23 @@ public class HomePage {
 	@FindBy(linkText="Sign Out")
 	private WebElement signoutlink;
 	
+
 	@FindBy(linkText = "Documents")
 	private WebElement docLink;
 	
+
+	@FindBy(linkText = "Email")
+	private WebElement emailLink;
+
 	
 	
 	
-    public WebElement getOrgLink() {
+	
+    public WebElement getEmailLink() {
+		return emailLink;
+	}
+
+	public WebElement getOrgLink() {
 		return orgLink;
 	}
 
