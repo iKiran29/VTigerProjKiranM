@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\Dell\AppData\Local\Temp\testng-eclipse--92091033\testng-customsuite.xml</span>
+                    <span>testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method,   1 passed</span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -103,13 +103,12 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-
                         <a href="#" panel-name="suite-Default_suite" title="com.client.project.TroubleTicket.createTroubleTicketTest" class="method navigator-link" hash-for-method="createtroubleticketTest">createtroubleticketTest</a> <!-- method navigator-link -->
-
-                        <a href="#" panel-name="suite-Default_suite" title="com.client.project.Document.CreateDocTest" class="method navigator-link" hash-for-method="createDocTest">createDocTest</a> <!-- method navigator-link -->
-
-                        <a href="#" panel-name="suite-Default_suite" title="com.client.project.Email.createEmailTest" class="method navigator-link" hash-for-method="createemailTest">createemailTest</a> <!-- method navigator-link -->
-
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="com.client.project.TroubleTicket.createTroubleTicketTest" class="method navigator-link" hash-for-method="createtroubleticketwithFAQTest">createtroubleticketwithFAQTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -127,13 +126,7 @@
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-
               <span class="class-name">com.client.project.TroubleTicket.createTroubleTicketTest</span>
-
-              <span class="class-name">com.client.project.Document.CreateDocTest</span>
-
-              <span class="class-name">com.client.project.Email.createEmailTest</span>
-
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -141,15 +134,13 @@
                   <a name="createtroubleticketTest">
                   </a> <!-- createtroubleticketTest -->
                   <span class="method-name">createtroubleticketTest</span>
-
-                  <a name="createDocTest">
-                  </a> <!-- createDocTest -->
-                  <span class="method-name">createDocTest</span>
-
-                  <a name="createemailTest">
-                  </a> <!-- createemailTest -->
-                  <span class="method-name">createemailTest</span>
-
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="createtroubleticketwithFAQTest">
+                  </a> <!-- createtroubleticketwithFAQTest -->
+                  <span class="method-name">createtroubleticketwithFAQTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -157,12 +148,7 @@
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/s4/g5jdrl354dvcc2068gcw3hc80000gn/T/testng-eclipse-1563566609/testng-customsuite.xml</span>
-
-            <span class="header-content">C:\Users\Dell\AppData\Local\Temp\testng-eclipse--92091033\testng-customsuite.xml</span>
-
-           <span class="header-content">/private/var/folders/s4/g5jdrl354dvcc2068gcw3hc80000gn/T/testng-eclipse--649679724/testng-customsuite.xml</span>
-
+            <span class="header-content">/private/var/folders/s4/g5jdrl354dvcc2068gcw3hc80000gn/T/testng-eclipse-812023360/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -171,21 +157,7 @@
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.client.project.TroubleTicket.createTroubleTicketTest&quot;&gt;
-
-      &lt;class name=&quot;com.client.project.Document.CreateDocTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;createDocTest&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.client.project.Document.CreateDocTest --&gt;
-
-      &lt;class name=&quot;com.client.project.Email.createEmailTest&quot;&gt;
-        &lt;methods&gt;
-          &lt;include name=&quot;createtroubleticketTest&quot;/&gt;
-        &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.client.project.TroubleTicket.createTroubleTicketTest --&gt;
-      &lt;/class&gt; &lt;!-- com.client.project.Email.createEmailTest --&gt;
-
+      &lt;class name=&quot;com.client.project.TroubleTicket.createTroubleTicketTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -225,30 +197,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'createtroubleticketTest')
+data.setCell(0, 1, 'createtroubleticketwithFAQTest')
 data.setCell(0, 2, 'com.client.project.TroubleTicket.createTroubleTicketTest')
-data.setCell(0, 3, 8291);
-
-data.setCell(0, 1, 'createDocTest')
-data.setCell(0, 2, 'com.client.project.Document.CreateDocTest')
-data.setCell(0, 3, 7416);
-
-data.setCell(0, 1, 'createemailTest')
-data.setCell(0, 2, 'com.client.project.Email.createEmailTest')
-data.setCell(0, 3, 3576);
-
+data.setCell(0, 3, 8349);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'createtroubleticketTest')
+data.setCell(1, 2, 'com.client.project.TroubleTicket.createTroubleTicketTest')
+data.setCell(1, 3, 7788);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 8 seconds</span>
-
-              <span class="suite-total-time">Total running time: 7 seconds</span>
-
-              <span class="suite-total-time">Total running time: 3 seconds</span>
-
+              <span class="suite-total-time">Total running time: 16 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -275,64 +237,45 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.client.project.TroubleTicket.createTroubleTicketTest</div> <!-- chronological-class-name -->
-
-              <div class="chronological-class-name">com.client.project.Document.CreateDocTest</div> <!-- chronological-class-name -->
-
-              <div class="chronological-class-name">com.client.project.Email.createEmailTest</div> <!-- chronological-class-name -->
-
               <div class="configuration-suite before">
                 <span class="method-name">configBS</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">configBC</span>
-                <span class="method-start">101 ms</span>
-
-                <span class="method-start">76 ms</span>
+                <span class="method-start">83 ms</span>
               </div> <!-- configuration-class before -->
               <div class="configuration-method before">
                 <span class="method-name">configBM</span>
-                <span class="method-start">3819 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">createDocTest</span>
-                <span class="method-start">6455 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">configAM</span>
-                <span class="method-start">13879 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">configAC</span>
-                <span class="method-start">14943 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-suite after">
-                <span class="method-name">configAS</span>
-                <span class="method-start">15215 ms</span>
-
-               <span class="method-start">118 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">configBM</span>
-                <span class="method-start">3923 ms</span>
+                <span class="method-start">3950 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">createtroubleticketTest</span>
-                <span class="method-start">6020 ms</span>
+                <span class="method-start">6358 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">configAM</span>
-                <span class="method-start">14318 ms</span>
+                <span class="method-start">14152 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">configBM</span>
+                <span class="method-start">14968 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">createtroubleticketwithFAQTest</span>
+                <span class="method-start">15241 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">configAM</span>
+                <span class="method-start">23596 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-class after">
                 <span class="method-name">configAC</span>
-                <span class="method-start">15094 ms</span>
+                <span class="method-start">24356 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-suite after">
                 <span class="method-name">configAS</span>
-                <span class="method-start">15370 ms</span>
-                <span class="method-start">10686 ms</span>
-
+                <span class="method-start">24814 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
