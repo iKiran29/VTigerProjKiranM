@@ -47,10 +47,15 @@ public class HomePage {
 	@FindBy(linkText = "Email")
 	private WebElement emailLink;
 	
+	@FindBy(linkText = "Trouble Tickets")
+	private WebElement troubleticketLink;
 	
-	
-	
-    public WebElement getEmailLink() {
+
+    public WebElement getTroubleticketLink() {
+		return troubleticketLink;
+	}
+
+	public WebElement getEmailLink() {
 		return emailLink;
 	}
 
