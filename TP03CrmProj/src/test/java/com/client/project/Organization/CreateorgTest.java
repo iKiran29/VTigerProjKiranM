@@ -1,6 +1,7 @@
 package com.client.project.Organization;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -58,11 +59,14 @@ public class CreateorgTest extends BaseClass {
 	  	
 	  	driver.findElement(By.linkText("Add Event")).click();
 	  	driver.findElement(By.name("subject")).sendKeys("event1");
+	  	 
 	  	driver.findElement(By.id("jscal_trigger_date_start")).click();
-	  	Thread.sleep(2000);
+	  	
+	  	Thread.sleep(5000);
+	  	driver.findElement(By.linkText("Today")).click();
+	  	driver.findElement(By.xpath("//input[@title='Save [Alt+S]']")).click();
 
-
-		
+		System.out.println("updated");
 	}
 
 	
