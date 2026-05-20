@@ -51,23 +51,7 @@ public class CreateorgTest extends BaseClass {
 
 	
 
-	@Test
-	public void editOrg() throws Throwable {
-		
-		hp.getOrgLink().click();
-		
-		driver.findElement(By.id("40922")).click();
-		
-		Orgpage op=new Orgpage(driver);
-		op.getEditorg().click();
-		
-	     String actualMsg = op.getHeaderOrgEdit().getText().trim();
-	       Assert.assertTrue( actualMsg.contains("Editing Organization Information"));
-       
-	    System.out.println("Edit message verified successfully");
- 	
-	}
-	  	
+	
 
 
 	
@@ -91,6 +75,23 @@ public class CreateorgTest extends BaseClass {
 		
 		
 	}
+	@Test
+	public void editOrg() throws Throwable {
+		
+		hp.getOrgLink().click();
+		
+		driver.findElement(By.id("40922")).click();
+		
+		Orgpage op=new Orgpage(driver);
+		op.getEditorg().click();
+		
+	     String actualMsg = op.getHeaderOrgEdit().getText().trim();
+	       Assert.assertTrue( actualMsg.contains("Editing Organization Information"));
+       
+	    System.out.println("Edit message verified successfully");
+ 	
+	}
+	  	
 }
 	
 	
