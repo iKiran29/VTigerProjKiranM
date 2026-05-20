@@ -1,5 +1,6 @@
 package com.client.project.TroubleTicket;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -20,6 +21,21 @@ public class createTroubleTicketTest extends BaseClass{
 		boolean status = verifmsg.contains(title);
 		Assert.assertEquals(status, true);
 		System.out.println(verifmsg);
+	}
+	@Test
+	public void createtroubleticketwithFAQTest() throws Throwable {
+		
+		String title = eLib.getDataFromExcel("org", 22, 2) + jLib.getRandomNum();
+		hp.getTroubleticketLink().click();
+		
+		TroubleTickePage ttp = new TroubleTickePage(driver);
+		ttp.createTroubleTicket(title);
+		
+		driver.findElement(By.linkText("Convert As FAQ")).click();
+		String faq = driver.findElement(By.xpath("//span[@class='dvHeaderText']")).getText();
+		System.out.println(faq);
+		
+		
 	}
 
 }
