@@ -24,6 +24,7 @@ public class CreateCampaignTest extends BaseClass {
 		Assert.assertEquals(status, true);
 		
 	}
+	
 
 }
 
