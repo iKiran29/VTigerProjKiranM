@@ -1,9 +1,11 @@
 package com.client.project.Campaign;
 
+import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.client.ObjectRepository.CampaignPage;
+import com.client.ObjectRepository.Orgpage;
 import com.client.Project.packageName.BaseClass;
 
 public class CreateCampaignTest extends BaseClass {
@@ -24,6 +26,27 @@ public class CreateCampaignTest extends BaseClass {
 		Assert.assertEquals(status, true);
 		
 	}
+	
+    @Test
+    
+    public void deleteCampaignTest() {
+    	hp.getMorelink().click();
+		hp.getCampaignlink().click();
+		
+    	driver.findElement(By.id("537")).click();
+    	Orgpage op=new Orgpage(driver);
+		op.getEditorg().click();
+		
+		CampaignPage cmp = new CampaignPage(driver);
+		String actualMsg = cmp.getEditheaderInfocampaign().getText();
+
+	Assert.assertTrue(actualMsg.contains("Editing Campaign Information"));
+
+	System.out.println("Edit message verified successfully");
+	
+    	
+    }
+ 
 	
 
 }
