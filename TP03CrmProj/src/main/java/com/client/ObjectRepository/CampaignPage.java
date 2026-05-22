@@ -32,9 +32,17 @@ public class CampaignPage {
 	@FindBy(xpath = "//span[@class='dvHeaderText']")
 	private WebElement headerInfo;
 	
+	@FindBy(xpath = "//span[@class='lvtHeaderText']")
+	private WebElement editheaderInfocampaign;
 	
 	
 	
+	
+	
+	public WebElement getEditheaderInfocampaign() {
+		return editheaderInfocampaign;
+	}
+
 	public WebElement getHeaderInfo() {
 		return headerInfo;
 	}
